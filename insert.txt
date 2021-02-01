@@ -1,0 +1,41 @@
+CREATE TABLE customer
+(
+    customer_id number PRIMARY KEY not null,
+    customer_name varchar(40),
+    customer_tel number,
+)
+
+
+
+CREATE TABLE product
+(
+    product_id numder PRIMARY KEY not null,
+    product_name varchar(40),
+    price varchar(20),
+)
+
+
+
+CREATE TABLE orders
+(
+    customer_id number PRIMARY KEY foreign key not null,
+    product_id numder PRIMARY KEY foreign key not null,
+    quantity number,
+    total_amount number
+)
+INSERT INTO customer(customer_id number,customer_name,ustomer_tel number) VALUES (c01,ali,713210009)
+NSERT INTO customer(customer_id number,customer_name,ustomer_tel number) VALUES (c02,asma,713210009)
+
+
+
+
+
+NSERT INTO product(product_id,product_name,category,price)VALUES (p01,samsunggalaxy s20,smartphone,3299)
+NSERT INTO product(product_id,product_name,category,price)VALUES (p02,asus notebook,pc,4599)
+
+
+
+
+NSERT INTO orders(customer_id,product_id,orderdate,quantity,total_amount)VALUES(c01,p02,null,2,9198)
+NSERT INTO orders(customer_id,product_id,orderdate,quantity,total_amount)VALUES(c02,p01,28/05/2020,1,3299)
+
